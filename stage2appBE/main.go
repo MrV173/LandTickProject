@@ -1,7 +1,9 @@
 package main
 
 import (
+	"fmt"
 	"landtick/database"
+	"os"
 
 	"landtick/pkg/mysql"
 	"landtick/routes"
@@ -31,5 +33,8 @@ func main() {
 
 	routes.Routeinit(e.Group("/api/v1"))
 
-	e.Logger.Fatal(e.Start("localhost:5000"))
+	var PORT = os.Getenv("PORT")
+
+	fmt.Println("server running localhost:" + PORT)
+	e.Logger.Fatal(e.Start(":" + PORT))
 }
