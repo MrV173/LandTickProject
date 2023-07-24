@@ -14,10 +14,7 @@ import (
 )
 
 func main() {
-	errEnv := godotenv.Load()
-	if errEnv != nil {
-		panic("failed to load env file")
-	}
+	godotenv.Load()
 	e := echo.New()
 
 	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{

@@ -1,0 +1,25 @@
+# flyctl launch added from stage2app\.gitignore
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+stage2app\node_modules
+stage2app\.pnp
+stage2app\**\.pnp.js
+
+# testing
+stage2app\coverage
+
+# production
+stage2app\build
+
+# misc
+stage2app\**\.DS_Store
+stage2app\**\.env.local
+stage2app\**\.env.development.local
+stage2app\**\.env.test.local
+stage2app\**\.env.production.local
+
+stage2app\**\npm-debug.log*
+stage2app\**\yarn-debug.log*
+stage2app\**\yarn-error.log*
+fly.toml
